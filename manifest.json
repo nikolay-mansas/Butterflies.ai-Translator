@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Butterflies Translator",
+    "version": "1.0",
+    "description": "Translates butterflies.ai.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.butterflies.ai/*"],
+        "js": ["jquery.min.js", "content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
